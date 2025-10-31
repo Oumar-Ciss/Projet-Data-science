@@ -1,0 +1,431 @@
+﻿---
+fileType: Question Text
+version: CSPro 7.7
+languages:
+  - name: FR
+    label: Français
+  - name: EN
+    label: English
+  - name: DL
+    label: Dioula
+  - name: MR
+    label: Moore
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: DICTIONNAIRE_DICT.S0Q0
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-size: 24px; font-family: &quot;Times New Roman&quot;;">I b’a fɛ ka ɲininkali kɛ kan jumɛn na?</span></p><p><font color="#ff9c00"><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Kan min bɛ bɛn i ma, o sugandi</span></font></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">In what language would you like to do the interview?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choose the language that suits you</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Dans quelle langue aimeriez-vous faire l'interview ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choisissez la langue qui vous convient.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yãmb dat n maana sõsg ne buud-gom-bʋgo?</span></p><p><font color="#ff9c00"><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Bao-y buud-gomd sẽn zems ne-y</span></font></p><p></p>
+  - name: DICTIONNAIRE_DICT.S0Q1
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Du kɔnɔ stratum ye mun ye?</span></p><p><font color="#ff9c00"><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Aw bɛ don du kɔnɔ stratum kɔnɔ.</span></font></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the household stratum?</span></p><p><font color="#ff9c00"><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Enter the household stratum.</span></font></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est la strate du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez la strate du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-size: 24px; font-family: &quot;Times New Roman&quot;;">Yaa ãnd dãmb n yaa zak rãmb la zak rãmba?</span></p><p><font color="#ff9c00"><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Y sã n dat n bãng sẽn na n yɩ to-to, bɩ y bao n bãng sẽn na n yɩ to-to.</span></font></p><p></p>
+  - name: DICTIONNAIRE_DICT.S0Q2
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Du jatebɔyɔrɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Du kɔnɔ jatebɔyɔrɔ don.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the household enumeration area?</span></p><p><font color="#ff9c00"><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Enter the household enumeration area.</span></font></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est la zone de dénombrement du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez la zone dénombrement&nbsp; du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa zĩ-bʋg la b sõdgd zak fãa?</span></p><p><font color="#ff9c00"><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;">Gʋls-y zak sõor zĩiga.</span></font></p><p></p>
+  - name: DICTIONNAIRE_DICT.S0Q3
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Du nimɔrɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Du nimɔrɔ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the household number?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the household number.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le numéro du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez la numéro du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa ãnd soab la y tõe n bool tɩ yɩgse?</span></p><p><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;"><font color="#ff9c00">Rɩk-y ro-kɩtbã nimero.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q1
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Du sigiyɔrɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Du kɔnɔ sigiyɔrɔ sugandi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the household’s area of residence?</span></p><p><span style="font-size: 18px; font-family: &quot;Times New Roman&quot;;"><font color="#ff9c00">Choose the living environment of the household.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le milieu de résidence du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choisissez le milieu de vie du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa ãnd dãmb zakẽ la b be?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Bao-y n bãng-y zakã neb sẽn vɩ zĩig ninga.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q2
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Dutigi tɔgɔ ye di?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Dutigi tɔgɔ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the name of the head of household?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the name of the head of household.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le nom du chef de ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le nom du chef de ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa ãnda n yaa ro-gũuda?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y ned ning sẽn yaa zakã taoor soabã yʋʋre.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q3
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Dutigi ka telefɔni nimɔrɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Dutigi ka nimɔrɔ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the telephone number of the head of household?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the number of the head of household.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le numéro de téléphone du chef&nbsp; de ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le numéro du chef&nbsp; de ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa ãnd soab n yaa ro-gũuda telefõnnẽ wã?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y ned ning sẽn get roogã yellã telefõrn sebre.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q4
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Du kɔnɔ sigiyɔrɔ sugu ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Du kɔnɔ so suguya sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the household’s type of accommodation?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the household's housing type.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le type de logement du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le type de logement du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Ro-bʋs la zak rãmb nins sẽn be roogã pʋgẽ wã?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y zakã sẽn yaa to-to wã.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q4_A
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Du kɔnɔ so suguya jumɛn bɛ yen?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Du kɔnɔ so suguya sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the type of housing of the household?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the household's housing type.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est alors le type de logement du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le type de logement du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">La yaa zak bʋg la b sẽn boond tɩ roogo?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y zakã sẽn yaa to-to wã.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q5
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Du kɔnɔmɔgɔw hakɛ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Du kɔnɔmɔgɔw hakɛ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the occupancy status of the household?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the household occupancy status.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le statut d'occupation du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le statut d'occupation du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa wãn to la zakã zãadb tar-a?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y zakã sẽn yaa to-to.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q5_A
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O tuma na fɛ, du ka baara cogoya ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Du kɔnɔmɔgɔw hakɛ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What then is the occupation status of the household?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the household occupancy status.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est alors le statut d'occupation du ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le statut d'occupation du ménage.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Sã n yaa woto, zakã zãab yaa wãn-wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y zakã sẽn yaa to-to.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S1Q6
+    conditions:
+      - questionText:
+          DL: |
+            <p>Yala jikuruw bɛ i ka du kɛrɛfɛ wa?</p><p>Jaabi bɛ kɛ Ɔwɔ walima Ayi.</p><p></p>
+          EN: |
+            <p>Are there puddles of water near your household?</p><p>Answer Yes or No.</p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Est-ce qu'il y'a des flaques d'eaux aux abords de votre ménage ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Repondez par Oui ou Non.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yãmb zakẽ wã bee ko-pĩis bɩ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Lebg-y n yeel tɩ N-ye bɩ N-ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q0
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O tigi ka nimɔrɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Aw bɛ o tigi ka nimɔrɔ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the individual's number?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the individual's number.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le numéro de l'individu ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le numéro de l'individu.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O tigi ka nimɔrɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Aw bɛ o tigi ka nimɔrɔ sɛbɛn.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q1
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O tigi tɔgɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">O tigi tɔgɔ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the individual's name?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the individual's name.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le nom de l'individu&nbsp;&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le nom de l'individu.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the individual's name?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the individual's name.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q2
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ yaa bõe pag bɩ rao?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Y sã n dat n bãng a ~~S2Q1~~ kẽed-n-taagã, bɩ y yãk a~~S2Q1~~.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the gender of ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choose the gender of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le sexe de&nbsp;&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choisissez le sexe de&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ yaa bõe pag bɩ rao?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Y sã n dat n bãng a ~~S2Q1~~ kẽed-n-taagã, bɩ y yãk a~~S2Q1~~.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q3
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">How old is ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the age of ~~S2Q1~~.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">How old is ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the age of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est l'âge de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez l'âge de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">A ~~S2Q1~~&nbsp;tara yʋʋm a wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y yʋʋmã n ~~S2Q1~~.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q4
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ ka furu cogoya ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Furu cogoya sugandi ~~S2Q1~~.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the marital status of ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choose the marital status of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est la situation matrimoniale de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choisissez la situation matrimoniale de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa wãn to ne a ~~S2Q1~~&nbsp;pag ne a sɩd yɛlã?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Y sã n dat n bãng y sẽn tõe n maan to-to tɩ y kãadmã yɩ sõma, bɩ y yãk y sẽn tõe n maan to-to tɩ y kãadmã yɩ sõma.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q4_A
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O la, ~~S2Q1~~ furu cogoya ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">O kɔ fɛ, i ka furu cogoya don ~~S2Q1~~.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">So what is the marital status of ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Then enter the marital status of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est alors la situation matrimoniale de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez alors la situation matrimoniale de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa wãn to la a ~~S2Q1~~&nbsp;kãadmã yɩ toore?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rẽ bɩ y gʋls tɩ ~~S2Q1~~.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q5
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ ka diinɛ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">~~S2Q1~~ ka diinɛ sugandi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is ~~S2Q1~~'s religion?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choose the religion of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est la religion de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choisissez la religion de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa ~~S2Q1~~&nbsp;tũudmã la bʋgo?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Y sã n dat n bãng y sẽn na n tũ ~~S2Q1~~ tũudmã, bɩ y yãk a ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q5_A
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O la, ~~S2Q1~~ furu cogoya ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">O kɔ fɛ, i ka furu cogoya don ~~S2Q1~~.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">So what is the marital status of ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Then enter the marital status of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle alors est la situation matrimoniale de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez alors la situation matrimoniale de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~<font color="#ff9c00">.</font></span></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Sã n yaa woto, a ~~S2Q1~~&nbsp;kãadmã yaa wãn to?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rẽ bɩ y gʋls tɩ ~~S2Q1~~.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q6
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ siya ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">O kɔ fɛ, i ka don ~~S2Q1~~ siya la.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the ethnicity of ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Then enter the ethnicity of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est l'ethnie de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez aors l'ethnie de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ yaa buud bʋgo?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Y sã n dat n bãng a ~~S2Q1~~&nbsp;buudã, y tõe n sõd-a lame.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q6_A
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O la ~~S2Q1~~ siya ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">O kɔ fɛ, i ka don ~~S2Q1~~ siya la.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">So what is the ethnicity of ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Then enter the ethnicity of ~~S2Q1~~.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est alors l'ethnie de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez alors l'ethnie de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Sã n yaa woto, ~~S2Q1~~&nbsp;yaa buud bʋgo?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rẽ bɩ y gʋls ~~S2Q1~~ buudã.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q7
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ ka kalan hakɛ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Kalan hakɛ sugandi ~~S2Q1~~ .</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is ~~S2Q1~~'s educational level?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choose the education level of ~~S2Q1~~ .</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le niveau d'instruction de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choisissez le niveau d'instruction de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span>&nbsp;</span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ karengã yaa wãn-wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Y na n yãka ~~S2Q1~~ karengã.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S2Q7_A
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O la ~~S2Q1~~ ka kalan hakɛ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">O kɔfɛ , i ka don kalan hakɛ la ~~S2Q1~~ .</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">So what is the level of education of ~~S2Q1~~?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Then enter the education level of ~~S2Q1~~ .</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est alors le niveau d'instructiion de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez alors le niveau d'instruction de&nbsp;&nbsp;</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;"><span style="font-size: 18px;">~~S2Q1~~</span>&nbsp;</span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">~~S2Q1~~ karengã yaa wãn-wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Y sã n dat n bãnge, bɩ y gʋls tɩ ~~S2Q1~~.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q1
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Mɔgɔ kelen-kelen min bɛ du kɔnɔmɔgɔw tɔgɔlajɛ la, o hakɛ ye joli ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Aw bɛ o tigi ka nimɔrɔ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the number of the individual in the list of household members?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the individual's number.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le numéro de l'individu</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;dans la liste des membres du ménage?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez le numéro de l'individu</font></span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Ned ning sẽn be roogã pʋgẽ wã, a sõorã yaa wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y nedã nimero.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q2
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yala o tigi bɛ sɔn ka sɛgɛsɛgɛli kɛ wa?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">&nbsp;Jaabi bɛ kɛ Ɔwɔ walima Ayi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Does the individual agree to take the test?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">&nbsp; &nbsp;Answer Yes or No.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">L'individu accepte t-il&nbsp; faire le test</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">&nbsp; Répondez par Oui ou Non.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Nedã sak n na n maana makrã bɩ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Lebg-y n yeel tɩ N-yẽe bɩ N-ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q3
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O tigi ka sɛgɛsɛgɛli jaabi ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Aw bɛ o tigi ka sɛgɛsɛgɛli jaabi sugandi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the individual's test result?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choose the individual's test result.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le résultat du test de&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">l'individu</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Choisissez le résultat du test de l'individu</font></span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;</span><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Nedã sẽn maan vaeesgã baasga ne bõe?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Bao-y nin-kãng makrã sẽn na n yɩ to-to wã.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q4
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yala dengue banakisɛ ye o tigi minɛ kalo 12 tɛmɛnenw kɔnɔ wa?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Jaabi bɛ kɛ Ɔwɔ walima Ayi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Has the individual been affected by dengue fever in the past 12 months?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Answer Yes or No.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">L'individu a-t-il été touché par la dengue au cours des 12 derniers mois?</span></p><p><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">Répondez par Oui ou Non.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Rẽ yĩnga nedã ra tara dengri bãag kiis 12 ning sẽn loogã pʋgẽ bɩ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Lebg-y n yeel tɩ N-yẽe bɩ N-ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q5
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yala o tigi ye furakɛli sɔrɔ dɔgɔtɔrɔso la wa?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Jaabi bɛ kɛ Ɔwɔ walima Ayi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Did the individual receive treatment in hospital?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Answer Yes or No.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">L'individu a-t-il reçu des soins à l'hôpital&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">Répondez par Oui ou Non.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Rẽ yĩnga nin-kãngã paama logtor yir bɩ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Lebg-y n yeel tɩ N-yẽe bɩ N-ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q6
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yala o tigi ye laadala furakɛli kɛ wa?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Jaabi bɛ kɛ Ɔwɔ walima Ayi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Has the individual received traditional treatments?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Answer Yes or No.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">L'individu a-t-il reçu des traitements traditionnels</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">Répondez par Oui ou Non.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Rẽ yĩnga nin-kãng paama logtoɛɛmbã logtoɛɛmb bɩ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Lebg-y n yeel tɩ N-yẽe bɩ N-ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q7
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Kɛnɛya bɛ waati joli ta?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Aw bɛ kɛnɛya waati sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">How long does the convalescence take?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the recovery time.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quelle est la durée de convalescence</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><font color="#ff9c00" face="Times New Roman"><span style="font-size: 18px;">Saisissez la&nbsp; durée de la convalescence.</span></font></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">A na n paama laafɩ wakat a wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Gʋls-y bãagã sẽn na n kaoos to-to.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S3Q8
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yala o tigi bɛ sunɔgɔ sosow kɔrɔ wa?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Jaabi bɛ kɛ Ɔwɔ walima Ayi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Does the individual sleep under a mosquito net?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Answer Yes or No.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">L'individu dort-il sous une moustiquaire&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">Répondez par Oui ou Non.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">A na n paama laafɩ wakat a wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Gʋls-y bãagã sẽn na n kaoos to-to.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S4Q1
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Saya ko nimɔrɔ ye mun ye?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saya nimɔrɔ sɛbɛn.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What is the death case number?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the death number.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel est le numéro du cas de décès&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">Saisissez le numéro du décès.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yaa bõe n kɩt tɩ b kʋ-a?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Rɩk-y kiidã nimero.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S4Q2
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yala o tigi tun bɛ furakɛli kɛ dɔgɔtɔrɔso la ka kɔrɔ wa?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Jaabi bɛ kɛ Ɔwɔ walima Ayi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Was the individual previously receiving treatment in hospital?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Answer Yes or No.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">L'individu suivait-il un traitement à l'hôpital auparavant&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">Répondez par Oui ou Non.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Rẽ yĩnga nin-kãngã ra zoe n paama logtor yir tɩbsg bɩ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Lebg-y n yeel tɩ N-yẽe bɩ N-ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S4Q3
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Yala o tigi tun bɛ laadala furakɛli kɛ ka kɔrɔ wa?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Jaabi bɛ kɛ Ɔwɔ walima Ayi.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Was the individual previously receiving traditional treatment?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Answer Yes or No.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">L'individu suivait-il un traitement traditionnel auparavant&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">&nbsp;?</span></p><p><span style="color: rgb(255, 156, 0); font-family: &quot;Times New Roman&quot;; font-size: 18px;">Répondez par Oui ou Non.</span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Rẽ yĩnga nin-kãngã ra tũuda logtoɛɛmbã tɩɩm bɩ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Lebg-y n yeel tɩ N-yẽe bɩ N-ye.</font></span></p><p></p>
+  - name: DICTIONNAIRE_DICT.S4Q4
+    conditions:
+      - questionText:
+          DL: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">O tigi si tun ye mun ye a sa tuma na?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Aw bɛ o tigi si hakɛ sɛbɛn a saya waati.</font></span></p><p></p>
+          EN: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">What was the age of the individual at death?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Enter the individual's age at death.</font></span></p><p></p>
+          FR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Quel était l'âge de l'individu au décès ?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Saisissez l'âge de l'individu à son décès.</font></span></p><p></p>
+          MR: |
+            <p><span style="font-family: &quot;Times New Roman&quot;; font-size: 24px;">Nedã sẽn ki wã yʋʋm da yaa wãn-wãna?</span></p><p><span style="font-family: &quot;Times New Roman&quot;; font-size: 18px;"><font color="#ff9c00">Gʋls-y-yã a soabã yʋʋm a sẽn ki wã.</font></span></p><p></p>
+...

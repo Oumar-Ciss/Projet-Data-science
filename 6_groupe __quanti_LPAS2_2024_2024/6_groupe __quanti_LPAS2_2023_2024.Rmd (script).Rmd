@@ -1,0 +1,485 @@
+---
+title: "Rapport de projet"
+author: "Groupe_6"
+date: "`r Sys.Date()`"
+output: word_document
+---
+
+# Introduction
+
+Ouagadougou, la capitale du Burkina Faso, est une ville en pleine expansion. En tant que centre administratif, économique et culturel du pays, elle attire de plus en plus de résidents et d'investisseurs. Cette dynamique de croissance influence directement le marché foncier, faisant des parcelles de terrain une ressource de plus en plus prisée. Le prix des parcelles à Ouagadougou varie considérablement en fonction de plusieurs facteurs. Les quartiers proches du centre-ville ou des zones d'activités économiques majeures tendent à avoir des prix plus élevés en raison de leur attractivité et de leur accessibilité. En revanche, les zones périphériques ou en cours de développement offrent des terrains à des prix plus abordables, mais avec des perspectives de valorisation future.
+
+# Chargement des packages importants pour l'analyse
+
+```{r}
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(car)
+library(performance)
+library(lmtest)
+library(questionr)
+library(dplyr)
+library(performance)
+```
+
+# Importation de la base
+
+```{r}
+setwd("C:/Users/cisse/Desktop/Projet_quanti/Projet_quanti")
+data <- read_delim("Parcelles.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)
+names(data)
+```
+
+Dans notre jeu de données, on retrouve les différentes variables ci-dessus mentionnées notamment le COUT de la parcelle, sa Superficie, le Cout_m2, le Site, l'Usage,...
+
+## Description de la base
+
+```{r}
+summary(data)
+```
+
+Parmi les variables de notre jeu de données, quatre sont quantitatives à savoir le COUT de la parcelle, sa Superficie, le Cout_m2 et la Taxe_jouissance. Les autres variables notamment Usage, Site, Site, ... sont catégorielles. On remarque que parmi les variables quantitatives, le minimum du COUT est 0;A Ouagadougou, on ne peut avoir une parcelle à 0f.Pour ce faire nous allons supprimer les observations qui ont 0 comme COUT de parcelle.
+
+```{r}
+data <- subset(data,COUT != 0)
+```
+
+## Choix de la méthode
+
+La méthode hédonique adoptée par notre groupe est la méthode des caractéristiques. Cette méthode est appropriée car elle permet de modéliser le cout d'un bien en fonction des différentes caractérisques. Elle permet ainsi de faire une comparaison de la variation de ce cout par année à travers le calcul d'indices notamment l'indice des prix de Laspeyres et de Paasche.
+
+## Choix des variables
+
+### Variable dépendante: COUT
+
+L'analyse consite à comparer l'indice d'évolutions des prix des parcelles à Ouagadougou entre 2018 et 2024; la variable dépendante est naturellement le COUT de la parcelle.
+
+### Variables indépendantes: Superficie, Cout_m2, Site, Usage, Taxe_jouissance, Type_option
+
+Notre choix de variables indépendantes s'est tourné vers les variables:Superficie, Cout_m2, Site, Usage, Taxe_jouissance, Type_option; car selon nous le prix des parcelles à Ouagadougou serait influencé par la superficie, le quartier s'il est proche du centre ville ou des périphéries, l'usage pour habitation ou commerce, la taxe liée au terrain et la modalité de paiement : au comptant ou par tranche. Ainsi, nous allons donc exclure certaines qui sont suceptibles de ne pas nous servir dans l'analyse notamment les variables à une modalité: Ville, présence ONEA(qui est présent partout) et SONABEL(aussi présent partout) et certaines variables: attestation établie, plan établie que nous jugeons pas trop influents le prix des parcelles.
+
+```{r}
+data = data[,-c(1,2,12,13,14,15)]
+names(data)
+table(data$Usage)
+table(data$Site)
+```
+
+Après tabulation des deux variables catégorielles:Usage et Site, il se trouve qu'on peut regrouper certaines modalités de ces variables notamment harmoniser commerce dans usage et Ouaga 2000 dans site et profiter raffiner les différentes modalités.
+
+```{r}
+## Recoding data$Usage into data$Usage_rec
+data$Usage <- data$Usage %>%
+  fct_recode(
+    "COMMERCE" = "COMMERCE  A L'ANGLE",
+    "COMMERCE" = "COMMERCE ANGLE",
+    "COMMERCE" = "COMMERCE ANGLE 1 BITUME",
+    "COMMERCE" = "COMMERCE ANGLE 2 VOIES",
+    "COMMERCE" = "COMMERCE ORDINAIRE ANGLE",
+    "HABITATION" = "HABITATION ANGLE")
+
+## Recoding data$Site into data$Site_rec
+data$Site <- data$Site %>%
+  fct_recode(
+    "BASSINKO" = "BASSINKO SITE - BA",
+    "CISSIN" = "CISSIN 2020 - SITE G",
+    "OUAGA 2000" = "OUAGA 2000 - SITE A",
+    "OUAGA 2000" = "OUAGA 2000 - SITE AA")
+```
+
+Nous allons transformer les variables Date_vente et Date_contrat en format date et créer une nouvelle variable annee qui va prendre les années de la variable Date_vente en modalité. Cette variable va servir à scinder la base selon les années.
+
+```{r}
+#Conversion de certianes variables date en format date
+data <- data %>%
+  mutate(Date_vente = dmy(Date_vente),Date_fin_contrat = dmy(Date_fin_contrat))
+
+# Création de la variable annee
+data$annee = year(data$Date_vente)
+```
+
+## Création des bases par année et modélisation
+
+### Création des bases
+
+Le code suivant scinde notre base en fonction de l'année de vente de la parcelle.
+
+```{r}
+# Création d'un fichier CSV pour chaque année----
+data %>%
+  split(.$annee) %>%
+  walk(~ write_csv(.x, paste0("parcelles_", unique(.x$annee), ".csv")))
+```
+
+### Importation
+
+Nous allons à présent importer toutes les bases par année crées.
+
+```{r}
+## Importation des bases
+parcelles_2018 <- read_csv("parcelles_2018.csv")
+
+parcelles_2019 <- read_csv("parcelles_2019.csv")
+
+parcelles_2020 <- read_csv("parcelles_2020.csv")
+
+parcelles_2021 <- read_csv("parcelles_2021.csv")
+
+parcelles_2022 <- read_csv("parcelles_2022.csv")
+
+parcelles_2023 <- read_csv("parcelles_2023.csv")
+
+parcelles_2024 <- read_csv("parcelles_2024.csv")
+```
+
+### Modélisation
+
+Nous allons modéliser le COUT des parcelles par année.
+
+#### Pour 2018
+
+```{r}
+# Modélisation
+model_2018 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                as.factor(Site) + as.factor(Usage),data = parcelles_2018)
+
+# Résumé du modèle
+summary(model_2018)
+```
+
+Les variables superficie, cout_m2,taxe_jouissance,type_optionACOMPTE 50%,site sont significatives.Ces variables expliquent vraiment le cout des parcelles en 2018(ces variables ont un impact sur le cout des parcelles) La superficie des parcelles augmente leurs couts de 0.000006229 unités. Le prix des parcelles situées à OUAGA 2000 augmente de 1567unités R2=0.8999 alors les variables explicatives ajustent très bien le cout des parcelles(89.99%)
+
+#### Pour 2019
+
+```{r}
+model_2019 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                    as.factor(Site) + as.factor(Usage),data = parcelles_2019)
+
+# Résumé du modèle
+summary(model_2019)
+
+```
+
+Les variables superficie, cout_m2,UsageCOMMUNAUTAIRE sont significatives.Ces variables expliquent vraiment le cout des parcelles en 2019. La superficie des parcelles augmente leurs couts de 0.0002893 unités. Les parcelles à usage communautaire ont des prix augmentés de 1319 unités. Le R2=0.9049,ce qui veut dire que les variables indépendantes expliquent très bien le cout des parcelles(90.49%).
+
+#### Pour 2020
+
+```{r}
+model_2020 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                    as.factor(Site) + as.factor(Usage) ,data = parcelles_2020)
+
+# Résumé du modèle
+summary(model_2020)
+```
+
+#### Pour 2021
+
+```{r}
+model_2021 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                     as.factor(Usage) + as.factor(Site),data = parcelles_2021)
+
+# Résumé du modèle
+summary(model_2021)
+```
+
+Le R2 ajusté est de 0.9913; ce qui veut dire que le modèle s'ajuste aux données à 99.13%. En 2021, les caractéristiques qui influençaient le prix des parcelles à Ouagadougou étaient la superficie, le Cout_m2 et la Taxe_jouissance. Une augmentation de la superficie d'une unité entrainait une hausse du prix de la parcelle de 29550. Aussi une hausse du prix du m2 d'une unité augmentait le cout de la parcelle de 574 tandis qu'une augmentation de la Taxe_jouissance diminuait le prix de 858.
+
+#### Pour 2022
+
+```{r}
+model_2022 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                    as.factor(Site) + as.factor(Usage),data = parcelles_2022)
+
+# Résumé du modèle
+summary(model_2022)
+```
+
+Pour l'année 2022 nous appliquons un modèle linéaire multiple pour estimer le coût des parcelles (COUT) à partir des variables telles que la superficie, le coût par mètre carré, l'attestation établie, le site, et l'usage.Ainsi Superficie et Cout_m2 ont des coefficients élevés et significatifs (p \< 2e-16). Cela suggère que ces variables ont un impact assez fort et positif sur le coût des parcelles. Chaque unité de la superficie et le coût par m² augmente le coût de la parcelle de manière équivalente.SiteSILMIOUGOU a un coefficient significatif (p \< 0.001), ce qui suggère que ce site a un impact positif sur le coût.
+
+#### Pour 2023
+
+```{r}
+model_2023 <- lm(COUT ~ Superficie + Cout_m2 + as.factor(Type_option) + Taxe_Jouissance +
+                     as.factor(Site) + as.factor(Usage), data = parcelles_2023)
+
+# Résumé du modèle
+summary(model_2023)
+```
+
+Comme dans le modèle precédent, les varaibles superficie et cout_m2 ont des coefficients élevés et significatifs (p \< 2e-16). Ce qui suggère que ces variables ont un impact très fort et positif sur le coût des parcelles. Chaque unité de superficie ou de coût par m² augmente le coût de la parcelle de manière équivalente.Concernant les sites de localisation des parcelles ,SiteSILMIOUGOU à un coefficient significatif (p \< 0.01), ce qui suggère que ce site a un impact notable sur le coût des parcelles.Le modèle est globalement significatif (R2 ajusté = 0.9915)
+
+#### Pour 2024
+
+```{r}
+model_2024 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option)
+                     + as.factor(Site) + as.factor(Usage),data = parcelles_2024)
+
+# Résumé du modèle
+summary(model_2024)
+```
+
+Le modèle est globalement significatif: Le R2 ajusté est de 0.99, ce qui veut veut dire le modèle explique le cout des parcelles à 99.52% en 2024. Pour ce modèle, c'est la superficie , le cout_m2, la Taxe_jouissance et l'option acompte 50% qui sont significatifs au seuil de 5%; Ce qui veut dire qu'en 2024,toute chose étant égale par ailleurs, les prix des parcelles dépendaient plus de la superficie, du Cout_m2 et de la Taxe_jouissance et l'option de paiement.
+
+# Vérification et correction des hypothèses
+
+## Vérification
+
+### Pour le modèle de 2018
+
+```{r}
+# Test d'homoscédasticité
+check_heteroscedasticity(model_2018)
+
+# Test d'autocorrélation
+check_autocorrelation(model_2018)
+
+# Test de normalité
+check_normality(model_2018)
+
+# Test de multicollinéarité
+check_collinearity(model_2018)
+
+```
+
+Pour ce modèle, les hypothèses d'autocorrelation et de normalité des résidus ne sont pas vérifiées. Les résidus ne suivent donc pas une loi normale et ils sont autocorrélés.
+
+### Pour le modèle de 2019
+
+```{r}
+# Test d'homoscédasticité
+check_heteroscedasticity(model_2019)
+
+# Test d'autocorrélation
+check_autocorrelation(model_2019)
+
+# Test de normalité
+check_normality(model_2019)
+
+# Test de multicollinéarité
+check_collinearity(model_2019)
+
+```
+
+Pour ce modèle, les hypothèses d'homoscédasticité et de normalité des résidus ne sont pas vérifiées. Aussi,certaines variables notamment Usage et Type_option ont une forte corrélation.
+
+### Pour le modèle de 2020
+
+```{r}
+# Test d'homoscédasticité
+check_heteroscedasticity(model_2020)
+
+# Test d'autocorrélation
+check_autocorrelation(model_2020)
+
+# Test de normalité
+check_normality(model_2020)
+
+# Test de multicollinéarité
+check_collinearity(model_2020)
+
+```
+
+Pour ce modèle, les hypothèses d'autocorrélations et de normalité des résidus ne sont pas vérifiées ainsi que l'homoscédasticité. Aussi,certaines variables notamment Usage et Type_option ont une forte corrélation.
+
+### Pour le modèle de 2021
+
+```{r}
+# Test d'homoscédasticité
+check_heteroscedasticity(model_2021)
+
+# Test d'autocorrélation
+check_autocorrelation(model_2021)
+
+# Test de normalité
+check_normality(model_2021)
+
+# Test de multicollinéarité
+check_collinearity(model_2021)
+
+```
+
+Pour ce modèle, certianes des hypothèses sont vérifiées: les résidus suivent sont non autocorrélés. Par contre, les variables Cout_m2 et Site ont une forte correlation.
+
+### Pour le modèle de 2022
+
+```{r}
+# Test d'homoscédasticité
+check_heteroscedasticity(model_2022)
+
+# Test d'autocorrélation
+check_autocorrelation(model_2022)
+
+# Test de normalité
+check_normality(model_2022)
+
+# Test de multicollinéarité
+check_collinearity(model_2022)
+
+```
+
+Pour ce modèle, les résidus ne suivent pas une loi normale mais sont non autocorrélés et la variable Cout_m2 a une forte corrélation .
+
+### Pour le modèle de 2023
+
+```{r}
+# Test d'homoscédasticité
+check_heteroscedasticity(model_2023)
+
+# Test d'autocorrélation
+check_autocorrelation(model_2023)
+
+# Test de normalité
+check_normality(model_2023)
+
+# Test de multicollinéarité
+check_collinearity(model_2023)
+```
+
+Pour ce modèle, aucune hypothèse n'est vérifiée et la variable Taxe_jouissance a une forte correlation.
+
+### Pour le modèle de 2024
+
+```{r}
+# Test d'homoscédasticité
+check_heteroscedasticity(model_2024)
+
+# Test d'autocorrélation
+check_autocorrelation(model_2024)
+
+# Test de normalité
+check_normality(model_2024)
+
+# Test de multicollinéarité
+check_collinearity(model_2024)
+```
+
+Pour ce modèle, seulement l'hypothèse de non autocorrélation des résidus est vérifiée et il y a une forte corrélation entre les variables Cout_m2, Taxe_jouissance et Type_option.
+
+## Correction des hypothèses
+
+Pour l'homoscédasticité, nous avions appliqué le logarithme au cout, prendre sa racine carrée aussi la transformation de boxcox; mais dans certians modèles cette hypothèse n'est pas vérifiée et cela joue beaucoup sur nos indices, du coup nous avons décidé de laisser juste le modèle brut sans aucune transformation.Quand on applique par exemple le logarithme au cout, l'homoscédasticité est vérifiée pour le modèle de 2018 (non autocorrélation aussi), 2020 ,2021 et 2022 où toutes les hypothèses sont vérifiées: seulement certaines variables ont une forte corrélation (Usage, Cout_m2). Au vu de l'impact de la transformation sur les indices et une pertinence assez moindre, nous avons décidé de prendre le modèle brut. Nous allons donc procéder à correction de la multicollinéarité dans les différents modèles: le calcul des indices est très sensible à la multicollinéarité; pour preuve il ne fait pas de prévision pour 2024 car la multicollinéarité est forte.
+
+### Pour le modèle de 2018
+
+L'hypothèse de multicollinéarité est vérifiée pour 2018.
+
+```{r}
+check_collinearity(model_2018)
+```
+
+### Pour le modèle de 2019
+
+```{r}
+model_2019 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                    as.factor(Site) ,data = parcelles_2019)
+
+check_collinearity(model_2019)
+```
+
+Après avoir supprimé la variable Usage, il n'y a plus de multilcollinéarité dans le modèle.
+
+### Pour le modèle de 2020
+
+```{r}
+model_2020 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                    as.factor(Site) ,data = parcelles_2020)
+
+check_collinearity(model_2020)
+```
+
+Après avoir supprimé la variable Usage qui avait une forte corrélation, il n'y a plus de forte corrélation dans le modèle.
+
+### Pour le modèle de 2021
+
+```{r}
+model_2021 <- lm(COUT ~ Superficie + Cout_m2 + Taxe_Jouissance + as.factor(Type_option) +
+                     as.factor(Usage),data = parcelles_2021)
+
+check_collinearity(model_2021)
+```
+
+Après avoir supprimé la variable Site, il n'ya plus de forte corrélation dans le modèle.
+
+### Pour le modèle de 2022
+
+```{r}
+model_2022 <- lm(COUT ~ Superficie + Taxe_Jouissance + as.factor(Type_option) +
+                    as.factor(Site) + as.factor(Usage), data = parcelles_2022)
+
+check_collinearity(model_2022)
+```
+
+Après avoir supprimé la variable Cout_m2, il n'ya plus de forte corrélation dans le modèle.
+
+### Pour le modèle de 2023
+
+```{r}
+model_2023 <- lm(COUT ~ Superficie + Cout_m2 + as.factor(Type_option) +
+                     as.factor(Site),data = parcelles_2023)
+
+check_collinearity(model_2023)
+```
+
+Après avoir supprimé les variables Taxe_Jouissance et Usage, il n'ya plus de forte corrélation dans le modèle.
+
+### Pour le modèle de 2024
+
+```{r}
+model_2024 <- lm(COUT ~ Superficie + Cout_m2 + as.factor(Site),data = parcelles_2024)
+
+check_collinearity(model_2024)
+```
+
+Après avoir supprimé les variables Type_Option,Taxe_Jouissance, il n'ya plus de forte corrélation dans le modèle.
+
+# Calcul de l'indice
+
+Pour comparer les COUT par année, nous allons calculer les indices éléméntaires d'une année à l'autre. Ainsi nous allons comparer les indices d'une année par rapport à la précédente.
+
+```{r}
+# Fonction pour prédire les prix et calculer le coût moyen
+predict_mean_cost <- function(model, data) {
+  mean(predict(model, newdata = data))
+}
+
+# Calcul du coût moyen prédit pour chaque année
+mean_cost_2018 <- predict_mean_cost(model_2018, parcelles_2018)
+mean_cost_2019 <- predict_mean_cost(model_2019, parcelles_2019)
+mean_cost_2020 <- predict_mean_cost(model_2020, parcelles_2020)
+mean_cost_2021 <- predict_mean_cost(model_2021, parcelles_2021)
+mean_cost_2022 <- predict_mean_cost(model_2022, parcelles_2022)
+mean_cost_2023 <- predict_mean_cost(model_2023, parcelles_2023)
+mean_cost_2024 <- predict_mean_cost(model_2024, parcelles_2024)
+
+# Les coûts moyens dans un dataframe
+mean_costs <- data.frame(
+  annee = 2018:2024,
+  mean_cost = c(mean_cost_2018, mean_cost_2019, mean_cost_2020, mean_cost_2021, mean_cost_2022, mean_cost_2023, mean_cost_2024))
+
+# Calcul des indices élémentaires d'une année à l'autre
+mean_costs <- mean_costs %>%
+  mutate(
+    indice_elementaire_annee_a_annee = (mean_cost / lag(mean_cost)) * 100,
+    indice_2018_vs_2024 = ifelse(annee == 2024, (mean_cost / mean_cost_2018) * 100, NA))
+
+# Afficher les résultats
+print(mean_costs)
+
+```
+
+```{r}
+print(paste0("Le cout maximal en 2018 était évaluer à ", max(parcelles_2018$COUT)))
+print(paste0("Le cout maximal en 2019 était évaluer à ", max(parcelles_2019$COUT)))
+print(paste0("Le cout maximal en 2020 était évaluer à ", max(parcelles_2020$COUT)))
+print(paste0("Le cout maximal en 2021 était évaluer à ", max(parcelles_2021$COUT)))
+print(paste0("Le cout maximal en 2022 était évaluer à ", max(parcelles_2022$COUT)))
+print(paste0("Le cout maximal en 2023 était évaluer à ", max(parcelles_2023$COUT)))
+print(paste0("Le cout maximal en 2024 était évaluer à ", max(parcelles_2024$COUT)))
+```
+
+Par rapport à l'année 2018, les couts des parcelles ont connu une hausse de 30% en 2019. Cela pourrait être logique dans la mesure où le cout maximal en 2019 est largement superieur à celui de 2018. En ce qui concerne le prix des parcelles en 2020, on remarque une baisse de 24,51% par rapport à 2019. Par contre, on note une hausse de 90% des prix en 2021 par rapport à 2020 témoignépar le fait que le prix maximal en 2021 était évalué à plus de 500 millions tandis que celui de 2020 était de plus de 250 millions. En 2022, le prix maximal est passé de plus 510 millions à plus de 114 millions. Ceci se fait ressentir au niveau de l'indice qui est évalué à 60,51% En 2023, on note une baisse drastique de 73,13 % des prix des parcelles par rapport à 2022; se faisant ressentir au niveau des couts maximaux qui passent de plus de 114 millions en 2022 à plus de 46 millions en 2023. En 2024, on note une légère baisse de de 4,68% par rapport à 2023. Globalement, les prix des parcelles ont chuté de 60,15% entre 2018 et 2024. Le cout maximal est passé de plus de 256 millions à 41 millions en 2024.
+
+# Conclusion
+
+Le marché foncier de Ouagadougou est un reflet de la vitalité et de la croissance de la ville. Avec l'afflux constant de nouveaux résidents et l'intérêt croissant des investisseurs, le prix des parcelles à Ouagadougou est en constante évolution. Les facteurs tels que l'urbanisation rapide, les infrastructures améliorées, et les politiques gouvernementales jouent tous un rôle crucial dans la détermination des prix. Les quartiers centraux continuent de voir une hausse des prix en raison de leur attractivité et de leur accessibilité. Les zones périphériques, bien que plus abordables, offrent également des opportunités intéressantes pour ceux qui cherchent à investir dans des secteurs en développement.

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .btn.btn-warning {
+        background-color: rgb(18, 43, 182);
+        border-color: rgb(19, 8, 173);
+        color: white; /* Assurez-vous que le texte est lisible */
+    }
+</style>
+
+<h1 class="text-center"> Bienvenue sur notre application de gestion de salle de classes</h1>
+<div class="container">
+    <div class="row">
+        {% for salle in listes_salles %}
+        <div class="col-md-4 col-lg-3 mb-4">
+            <div class="card shadow">
+                <img src="{{ salle.image.url }}" class="card-img-top" alt="Image de la salle">
+                <div class="card-body">
+                    <h2 class="card-title">{{ salle.nom_salle }}</h2>
+                    <p class="card-text"> {{ salle.description| truncatewords:8 }}</p>
+                    <p class="card-text">Publiée depuis le{{ salle.date_publication }}</p>
+                    <p class="card-text">Modifié depuis le {{ salle.upload_at }}</p>
+                    <p class="card-text">Disponible: {{ salle.disponible }}</p>
+                    <a href="{% url 'salle_detail' salle.id %}" class="btn btn-warning">Lire la suite</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="text-center"> Membres du groupe</h1>
+<div class="container">
+    <div class="row">
+        <!-- Carte 1 -->
+        <div class="col-md-4 col-lg-3 mb-4 col-sm-6">
+            <div class="card shadow card-animate">
+                <img src="{% static 'image/Martinien.jpg' %}" class="card-img-top" alt="Image de la salle">
+                <div class="card-body">
+                    <p class="text-center">Martinien BATIONO</p>
+                    <p class="text-center">E-mail: bationomartinien547@gmail.com</p>
+                    <p class="text-center">Numero: (+226) 67 95 55 18</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="col-md-4 col-lg-3 mb-4 col-sm-6">
+            <div class="card shadow card-animate">
+                <img src="{% static 'image/Cisse.jpg' %}" class="card-img-top" alt="Image de la salle">
+                <div class="card-body">
+                    <p class="text-center"> Oumarou CISSE </p>
+                    <p class="text-center">E-mail :cisseoumarou63@gmail.com</p>
+                    <p class="text-center">Numero: (+226) 77 64 80 11</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="col-md-4 col-lg-3 mb-4 col-sm-6">
+            <div class="card shadow card-animate">
+                <img src="{% static 'image/Madi.jpg' %}" class="card-img-top" alt="Image de la salle">
+                <div class="card-body">
+                    <p class="text-center">Madi ZANGRE</p>
+                    <p class="text-center"> E-mail: zangremadi78@gmail.com</p>
+                    <p class="text-center">Numero: (+226) 55 53 75 23</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Ajoutez une animation pour l'apparition des cartes */
+.card-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.card-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet sur le bouton */
+.btn-primary {
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionne toutes les cartes
+    var cards = document.querySelectorAll('.card-animate');
+
+    // Fonction pour vérifier si un élément est visible dans la fenêtre
+    function isVisible(el) {
+        var rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom >= 0;
+    }
+
+    // Vérifie la visibilité de chaque carte et ajoute la classe 'visible' si elle est visible
+    function checkVisibility() {
+        cards.forEach(function(card) {
+            if (isVisible(card)) {
+                card.classList.add('visible');
+            }
+        });
+    }
+
+    // Vérifie la visibilité au chargement de la page et au défilement
+    checkVisibility();
+    window.addEventListener('scroll', checkVisibility);
+});
+</script>
+{% endblock %}

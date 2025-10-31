@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ salle.nom_salle }}</h1>
+    <img src="{{ salle.image.url }}" alt="Image de la salle" class="img-fluid">
+    <p>{{ salle.description }}</p>
+    <p>Publiée depuis le {{ salle.date_publication }}</p>
+    <p>Modifiée depuis le {{ salle.upload_at }}</p>
+    <p>Disponible: {{ salle.disponible }}</p>
+</div>
+{% endblock %}

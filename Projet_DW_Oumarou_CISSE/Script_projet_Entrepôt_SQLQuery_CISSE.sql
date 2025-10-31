@@ -143,4 +143,6 @@ CREATE TABLE objectif (
     objectif_ca FLOAT NOT NULL
 );
 
+
+select* from production;
  

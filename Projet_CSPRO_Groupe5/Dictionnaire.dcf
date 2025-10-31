@@ -1,0 +1,457 @@
+﻿[Dictionary]
+Version=CSPro 7.7
+Label=Dictionnaire
+Name=DICTIONNAIRE_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+SecurityOptions=77EDA50BB62DB470E4F9EAF8B41414201E54302B3024272512994623B37E0440
+
+[Languages]
+FR=Français
+EN=English
+DL=Dioula
+MR=Moore
+
+[Level]
+Label=Dictionnaire Level
+Name=DICTIONNAIRE_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Langue de l'interview|Interview language|Interview kan min bɛ kɛ|Sõsg buud-gomdã
+Name=S0Q0
+Start=2
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Langue de l'interview|Interview language|Interview kan min bɛ kɛ|Sõsg buud-gomdã
+Name=S0Q0_VS1
+Value=1;Français
+Value=2;English
+Value=3;Dioula
+Value=4;Moore
+
+[Item]
+Label=Strate du ménage|Household stratum|Du kɔnɔ stratum (sɔgɔsɔgɔninjɛ).|Zakã neb sẽn yaa to-to
+Name=S0Q1
+Start=3
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[Item]
+Label=ZD du ménage|ZD of the household|ZD ka du kɔnɔ|ZD zak pʋgẽ
+Name=S0Q2
+Start=5
+Len=4
+DataType=Numeric
+ZeroFill=Yes
+
+[Item]
+Label=Numéro du ménage|Household number|Du nimɔrɔ|Roogã sõor
+Name=S0Q3
+Start=9
+Len=4
+DataType=Numeric
+ZeroFill=Yes
+
+[Record]
+Label=SECTION1: Caractéristiques des ménages|SECTION1: Household characteristics|SIGIDA1: Du kɔnɔ jogo|BAOBGO A 1: Roagdbã sẽn yaa to-to
+Name=SECTION1
+RecordTypeValue='1'
+RecordLen=91
+
+[Item]
+Label=Date d'interview|Interview date|Interview don min bɛna kɛ|Sõsg daarã
+Name=S1Q01
+Start=13
+Len=11
+DataType=Alpha
+
+[Item]
+Label=Heure de début de l'interview|Interview start time|Interview daminɛ waati|Sõsg sɩngr wakat
+Name=S1Q02
+Start=24
+Len=8
+DataType=Alpha
+
+[Item]
+Label=Heure de fin de l'interview|Interview end time|Interview laban waati|Ges-y sõsgã sẽn na n baas wakat ninga
+Name=S1Q03
+Start=32
+Len=8
+DataType=Alpha
+
+[Item]
+Label=Milieu de résidence du ménage|Household area of residence|Du kɔnɔ sigiyɔrɔ|Zakã sẽn be zĩig ninga
+Name=S1Q1
+Start=40
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Milieu de résidence du ménage|Household area of residence|Du kɔnɔ sigiyɔrɔ|Zakã sẽn be zĩig ninga
+Name=S1Q1_VS1
+Value=1;Rural||Burusi|Tẽn-bila
+Value=2;Urbain|Urban|Duguba|Tẽn-bɛdã
+
+[Item]
+Label=Nom du chef de ménage|Name of head of household|Dutigi tɔgɔ|Roogã taoor soab yʋʋr
+Name=S1Q2
+Start=41
+Len=20
+DataType=Alpha
+
+[Item]
+Label=Numéro de téléphone du chef de ménage|Head of household telephone number|Du kuntigi telefɔni nimɔrɔ|Zakã taoor soab telefõnnã limore
+Name=S1Q3
+Start=61
+Len=8
+DataType=Numeric
+
+[Item]
+Label=Type de logement du ménage|Household type of accommodation|Du kɔnɔ sigiyɔrɔ suguya|Roogã  sẽn yaa a soaba
+Name=S1Q4
+Start=69
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Roogã  sẽn yaa a soaba|||Roogã  sẽn yaa a soaba
+Name=S1Q4_VS1
+Value=1;Villa
+Value=2;Appartement|Apartment|So|Louase roog zak-bedre pouga
+Value=3;Cour Commune|Common Court|Kiiritigɛso jɛlen|Kʋdemd bʋ-kaoodbã
+Value=4;Maison individuelle simple|Simple detached house|So detaché nɔgɔman|Roog-gilssi
+Value=5;Autre|Other|Dɔ wɛrɛ|A to
+
+[Item]
+Label=Précisez autre autre type de logement|Specify other other type of accommodation|Jatigila suguya wɛrɛw fɔ|Wilg-y zĩig ning y sẽn na n zĩnd n pa na n zĩnd ye.
+Name=S1Q4_A
+Start=70
+Len=10
+DataType=Alpha
+
+[Item]
+Label=Statut d’occupation du ménage|Household occupancy status|Du kɔnɔmɔgɔw ka sigicogo|Zakã tʋʋm zĩiga
+Name=S1Q5
+Start=80
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Statut d’occupation du ménage|Household occupancy status|Du kɔnɔmɔgɔw ka sigicogo|Zakã tʋʋm zĩiga
+Name=S1Q5_VS1
+Value=1;Propriétaire|Owner|Tigi|Sẽn so-a
+Value=2;Locataire|Tenant|Luwanse|Rik-yaonda kiuu-kiuugu
+Value=3;Logé par un tiers (ami, parent, employeur, etc)|Hosted by a third party (friend, relative, employer, etc.)|Jatigila bɛ kɛ mɔgɔ sabanan fɛ (teri, somɔgɔw, baarakɛyɔrɔ, a ɲɔgɔnnaw) .|Yaa ned a to n gãneg-a (ya a zo-rãmba, a roagdba, a tʋʋmdã taoor soab bɩ, a to)
+Value=4;Autre|Other|Dɔ wɛrɛ|A to
+
+[Item]
+Label=Précisez autre statut d'occupation du ménage|Specify other household occupancy status|Du kɔnɔ sigicogo wɛrɛw fɔ|Wilg-y y sẽn tõe n maan to-to n paam n kẽ zakẽ wã
+Name=S1Q5_A
+Start=81
+Len=10
+DataType=Alpha
+
+[Item]
+Label=Existence des flaques d’eau aux abords du logement|Existence of puddles of water near the accommodation|Jikuruw sɔrɔli sigiyɔrɔ kɛrɛfɛ|D sã n wa be roogã sɛɛgẽ, ko-zĩis n be.
+Name=S1Q6
+Start=91
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Existence des flaques d’eau aux abords du logement|Existence of puddles of water near the accommodation|Jikuruw sɔrɔli sigiyɔrɔ kɛrɛfɛ|D sã n wa be roogã sɛɛgẽ, ko-zĩis n be.
+Name=S1Q6_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Record]
+Label=SECTION2: Composition du ménage|SECTION2: Household composition|SIGIDA2: Du kɔnɔmɔgɔw ka baarakɛcogo|BAOBGO A 2: Zakã neb sẽn yaa to-to
+Name=SECTION2
+RecordTypeValue='2'
+MaxRecords=15
+RecordLen=81
+
+[Item]
+Label=Numéro de l’individu|Individual number|Mɔgɔ kelen-kelen bɛɛ ka jate|Pʋgdr-pʋgdr limore
+Name=S2Q0
+Start=13
+Len=2
+DataType=Numeric
+
+[Item]
+Label=Nom de l’individu|Name of individual|Mɔgɔ kelen-kelen bɛɛ tɔgɔ|Nedã yʋʋr
+Name=S2Q1
+Start=15
+Len=20
+DataType=Alpha
+
+[Item]
+Label=Sexe de l’individu|Sex of the individual|Cɛya ni musoya min bɛ mɔgɔ kelen-kelen bɛɛ la|pogrẽ
+Name=S2Q2
+Start=35
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Sexe de l’individu|Sex of the individual|Cɛya ni musoya min bɛ mɔgɔ kelen-kelen bɛɛ la|pogrẽ
+Name=S2Q2_VS1
+Value=1;Féminin|Feminine|Musoya|Poaka
+Value=2;Masculin|Male|Cɛya|Raoa
+
+[Item]
+Label=Age de l’individu|Age of the individual|Mɔgɔ kelen-kelen bɛɛ si hakɛ|Nedã yʋʋm
+Name=S2Q3
+Start=36
+Len=2
+DataType=Numeric
+
+[Item]
+Label=Situation matrimoniale l’individu|Marital status of the individual|O tigi ka furu cogoya|Ned sẽn kẽ kãadem to-to
+Name=S2Q4
+Start=38
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Situation matrimoniale l’individu|Marital status of the individual|O tigi ka furu cogoya|Ned sẽn kẽ kãadem to-to
+Name=S2Q4_VS1
+Value=1;Célibataire|Single|Cɛgana|Sẽn pa kẽ-a kãadem
+Value=2;Marié(e)|Married|Furulen|A kẽe kãadem
+Value=3;Divorcé(e)|Divorced|Furusa|yii-kãadem
+Value=4;Veuf/Veuve|Widower/widow|Muso-cɛ-salen / Cɛmuso salen|Pʋg-kõor
+Value=5;Autre|Other|Dɔ wɛrɛ|A to
+
+[Item]
+Label=Précisez autre situation matrimoniale|Specify other marital status|Furu cogoya wɛrɛw fɔ|Wilg-y y sẽn tõe n maan to-to y kãadmã pʋgẽ
+Name=S2Q4_A
+Start=39
+Len=10
+DataType=Alpha
+
+[Item]
+Label=Religion de l’individu|Religion of the individual|Mɔgɔ kelen-kelen bɛɛ ka diinɛ|Nedã tũudum
+Name=S2Q5
+Start=49
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Religion de l’individu|Religion of the individual|Mɔgɔ kelen-kelen bɛɛ ka diinɛ|Nedã tũudum
+Name=S2Q5_VS1
+Value=1;Islam||Silamɛya|Lislaamdo
+Value=2;Catholicisme|Catholicism|Katoliki diinɛ|Kiris neda
+Value=3;Protestantisme|Protestantism|Protɛstan diinɛ|Merka
+Value=4;Religion africaine|African religion|Farafinna diinɛ|Afrɩk tũudmã
+Value=5;Autre|Other|Dɔ wɛrɛ|A to
+
+[Item]
+Label=Précisez autre religion|Specify other religion|Diinan wɛrɛw fɔ|Wilg-y tũudum a to
+Name=S2Q5_A
+Start=50
+Len=10
+DataType=Alpha
+
+[Item]
+Label=Ethnie l’individu|Ethnicity of the individual|Mɔgɔ kelen-kelen bɛɛ ka siya|Ned buud
+Name=S2Q6
+Start=60
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Ethnie l’individu|Ethnicity of the individual|Mɔgɔ kelen-kelen bɛɛ ka siya|Ned buud
+Name=S2Q6_VS1
+Value=1;Moaaga
+Value=2;Peulh
+Value=3;Samo|||Peulh
+Value=4;Gourmantché
+Value=5;Bwaba
+Value=6;Bissa
+Value=7;Sénoufo
+Value=8;Gourounsi
+Value=9;Autre|Other|Dɔ wɛrɛ|A to
+
+[Item]
+Label=Précisez autre ethnie|Specify other ethnicity|Siya wɛrɛw fɔ|Wilg-y buud a to
+Name=S2Q6_A
+Start=61
+Len=10
+DataType=Alpha
+
+[Item]
+Label=Niveau d’instruction de l’individu|Educational level of the individual|Mɔgɔ kelen-kelen bɛɛ ka kalan hakɛ|Nedã karengã bɩ a minimã
+Name=S2Q7
+Start=71
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Niveau d’instruction de l’individu|Educational level of the individual|Mɔgɔ kelen-kelen bɛɛ ka kalan hakɛ|Nedã karengã bɩ a minimã
+Name=S2Q7_VS1
+Value=1;Aucun|None|Foɲisi|B pa tar ye
+Value=2;Primaire|Primary|Fɔlɔ|Pipi sullã
+Value=3;Secondaire|Secondary|Seginnkanni kalanso|Sekondɛr
+Value=4;Supérieur|Superior|A sanfɛ|Sẽn yɩɩd fãa
+Value=5;Autre|Other|Dɔ wɛrɛ|A to
+
+[Item]
+Label=Précisez autre niveau d'instruction|Specify other level of education|Kalan hakɛ wɛrɛw fɔ|Wilg-y y sẽn karem to-to
+Name=S2Q7_A
+Start=72
+Len=10
+DataType=Alpha
+
+[Record]
+Label=SECTION3: Cas de dengue|SECTION3: Dengue cases|SIGIDA3: Dengue banakisɛw|BAOBGO A 3: Dengue bãas sẽn paam neb
+Name=SECTION3
+RecordTypeValue='3'
+MaxRecords=15
+RecordLen=22
+
+[Item]
+Label=Numéro de l’individu dans la liste des membres du ménage|Number of the individual in the list of household members|Mɔgɔ min bɛ du kɔnɔmɔgɔw tɔgɔla sɛbɛn kɔnɔ, o hakɛ|Nedã limoro pʋgdré
+Name=S3Q1
+Start=13
+Len=2
+DataType=Numeric
+
+[Item]
+Label=Acceptation faire le test de la dengue|Acceptance to take the dengue test|Sɔn ka dengue sɛgɛsɛgɛli kɛ|I na-sakam toub yank ziima n-gesse dengue paa -taryan
+Name=S3Q2
+Start=15
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=I na-sakam toub yank ziima n-gesse dengue paa -taryan|||I na-sakam toub yank ziima n-gesse dengue paa -taryan
+Name=S3Q2_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Item]
+Label=Résultat le test|Test result|Kɔrɔbɔli jaabi|Makrã baasgo
+Name=S3Q3
+Start=16
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Résultat le test|Test result|Kɔrɔbɔli jaabi|Makrã baasgo
+Name=S3Q3_VS1
+Value=1;Positif|Positive|Sɔnsira|Togsa-banga
+Value=2;Négatif|Negative|Juguma|Ka-togse banga-yé
+Value=3;Pas encore disponible|Not yet available|A ma sɔrɔ fɔlɔ|D pa tõe n paam-a ye
+
+[Item]
+Label=Touché par la dingue au cours des 12 derniers mois|Touched by crazy in the last 12 months|A magara dibi la kalo 12 tɛmɛnenw na|Sẽn kẽed ne gãeemdã pʋgẽ kiis 12 sẽn loogã pʋgẽ
+Name=S3Q4
+Start=17
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Touché par la dingue au cours des 12 derniers mois|Touched by crazy in the last 12 months|A magara dibi la kalo 12 tɛmɛnenw na|Sẽn kẽed ne gãeemdã pʋgẽ kiis 12 sẽn loogã pʋgẽ
+Name=S3Q4_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Item]
+Label=Reçu des soins à l’hôpital|Received treatment in hospital|A ye furakɛli sɔrɔ dɔgɔtɔrɔso la|logtor yirã logtor yirã
+Name=S3Q5
+Start=18
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Reçu des soins à l’hôpital|Received treatment in hospital|A ye furakɛli sɔrɔ dɔgɔtɔrɔso la|logtor yirã logtor yirã
+Name=S3Q5_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Item]
+Label=Reçu des traitements traditionnels|Received traditional treatments|A ye laadala furaw sɔrɔ|A sẽn paam logtoɛɛmbã tɩbsg to-to
+Name=S3Q6
+Start=19
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Reçu des traitements traditionnels|Received traditional treatments|A ye laadala furaw sɔrɔ|A sẽn paam logtoɛɛmbã tɩbsg to-to
+Name=S3Q6_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Item]
+Label=Durée de la convalescence en jours|Duration of convalescence in days|Kɛnɛya sɔrɔli kuntaala tile kɔnɔ|Sẽn na maan rasem a wãn tɩ bãagã yi
+Name=S3Q7
+Start=20
+Len=2
+DataType=Numeric
+
+[Item]
+Label=Dormir toujours sous une moustiquaire imprégnée|Always sleep under an impregnated mosquito net|Aw bɛ sunɔgɔ tuma bɛɛ sosokɔnɔna min kɔnɔma don|Gõe-y wakat fãa tɩ b ning-y zũnd-zũnd roog pʋgẽ
+Name=S3Q8
+Start=22
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Dormir toujours sous une moustiquaire imprégnée|Always sleep under an impregnated mosquito net|Aw bɛ sunɔgɔ tuma bɛɛ sosokɔnɔna min kɔnɔma don|Gõe-y wakat fãa tɩ b ning-y zũnd-zũnd roog pʋgẽ
+Name=S3Q8_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Record]
+Label=SECTION4: Enregistrement des cas de décès liés à la dengue|SECTION4: Registration of dengue-related deaths|SIGIDA4: Dengue banakisɛ bɛ mɔgɔ minnu faga, olu tɔgɔ sɛbɛnni|BAOBGO A 4: Dengvi bãas sẽn kʋ neb tɩ b gʋlsd b yʋyã
+Name=SECTION4
+RecordTypeValue='4'
+MaxRecords=5
+RecordLen=17
+
+[Item]
+Label=Numéro du cas|Case number|Kisɛ nimɔrɔ|Bʋko wã sõore
+Name=S4Q1
+Start=13
+Len=1
+DataType=Numeric
+
+[Item]
+Label=Suivi un traitement à l’hôpital auparavant|Previous treatment in hospital|Furakɛli tɛmɛnen dɔgɔtɔrɔso la|Y sẽn zoe n paam logtor yir bɩ?
+Name=S4Q2
+Start=14
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Suivi un traitement à l’hôpital auparavant|Previous treatment in hospital|Furakɛli tɛmɛnen dɔgɔtɔrɔso la|Y sẽn zoe n paam logtor yir bɩ?
+Name=S4Q2_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Item]
+Label=Suivi un traitement traditionnel auparavant|Previously followed traditional treatment|Ka kɔn o ɲɛ, a tun bɛ tugu laadala furakɛli kɔ|Y sã n da zoe n paama logtoɛɛmbã tɩɩm
+Name=S4Q3
+Start=15
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=Suivi un traitement traditionnel auparavant|Previously followed traditional treatment|Ka kɔn o ɲɛ, a tun bɛ tugu laadala furakɛli kɔ|Y sã n da zoe n paama logtoɛɛmbã tɩɩm
+Name=S4Q3_VS1
+Value=1;Oui|Yes|Awɔ|N-djee
+Value=2;Non|No|Ayi|Ayo
+
+[Item]
+Label=Age à son décès|Age at death|Sɔrɔ si hakɛ saya waati|A sẽn wa n ki wã, a ra tara yʋʋm a wãna?
+Name=S4Q4
+Start=16
+Len=2
+DataType=Numeric
